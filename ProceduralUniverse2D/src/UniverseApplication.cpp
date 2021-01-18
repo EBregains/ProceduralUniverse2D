@@ -15,13 +15,13 @@ void UniverseApplication::Run()
 {
 	while (this->ptrWindow->isOpen())
 	{
-		dTime = dTimeClock.restart();
-		ProcessEvents();
-		//Check if theres an state, so Update and Draw
-		if (!mState.empty()) {
+		if (!mState.empty())		
+		{ 
+			ProcessEvents();
+			dTime = dTimeClock.restart();
 			Update(dTime);
 			Draw();
-		} // If is not, means that main menu was closed, so close the window
+		}								// If is not, means that main menu was closed, so close the window
 		else ptrWindow->close();
 	}
 }
@@ -42,15 +42,14 @@ void UniverseApplication::ProcessEvents()
 			break;
 
 		case sf::Event::LostFocus:
-			dTime = sf::Time::Zero;
 			break;
 		}
 	}
 }
-// Update the current State via dTime
-void UniverseApplication::Update(sf::Time dTime)
+
+void UniverseApplication::Update()
 {
-	mState.top().Update(dTime);												// If just want to quit, no need to change
+	mState.top().Update(this->dTime);												// If just want to quit, no need to change
 	switch (mState.top().NextState())
 	{
 	case eStates::STAY:
