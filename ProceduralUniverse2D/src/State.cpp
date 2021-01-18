@@ -8,9 +8,6 @@ State::~State()
 {
 }
 
-void State::ProcessEvents()
-{
-}
 
 void State::Update(sf::Time dTime)
 {
