@@ -19,6 +19,6 @@ public:
 	void ProcessEvents();
 	void Update(sf::Time dTime);
 	void Draw(const std::unique_ptr<sf::RenderWindow>& window);
-
+	
 };
 

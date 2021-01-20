@@ -8,7 +8,6 @@ State::~State()
 {
 }
 
-
 void State::Update(sf::Time dTime)
 {
 }

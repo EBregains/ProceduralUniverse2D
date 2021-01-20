@@ -1,13 +1,14 @@
 #include "UniverseApplication.h"
 
 //----------------- CONSTRUCTOR / DESTRUCTOR ---------------------------------------------------
-UniverseApplication::UniverseApplication()
+UniverseApplication::UniverseApplication() 
 {
 	ptrWindow = std::make_unique<sf::RenderWindow>(sf::VideoMode(800,800), "Universe Application");
 	ptrWindow->setFramerateLimit(60);
 }
-UniverseApplication::~UniverseApplication()
+UniverseApplication::~UniverseApplication() 
 {
+
 }
 
 // RUN LOOP -------------------------------------------------------------------------------------
@@ -19,7 +20,7 @@ void UniverseApplication::Run()
 		{ 
 			ProcessEvents();
 			dTime = dTimeClock.restart();
-			Update(dTime);
+			Update();
 			Draw();
 		}								// If is not, means that main menu was closed, so close the window
 		else ptrWindow->close();

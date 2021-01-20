@@ -15,7 +15,7 @@ private:
 	/// Pointer to main window.
 	/// </summary>
 	std::unique_ptr<sf::RenderWindow> ptrWindow;
-	
+
 	/// <summary>
 	/// Structure that contains the Application States.
 	/// </summary>
@@ -37,22 +37,22 @@ public:
 	/// Constructor.
 	/// </summary>
 	UniverseApplication();
-	
+
 	/// <summary>
 	/// Destructor.
 	/// </summary>
 	~UniverseApplication();
-	
+
 	/// <summary>
 	/// Application loop
 	/// </summary>
 	void Run();
-	
+
 	/// <summary>
 	/// Process all the SFML Events on the class member ptrWindow.
 	/// </summary>
 	void ProcessEvents();
-	
+
 	/// <summary>
 	/// Update the State at the top, and looks for changings.
 	/// </summary>
@@ -63,5 +63,5 @@ public:
 	/// Clear the main window, draw the current State, and display de Window.
 	/// </summary>
 	void Draw();
-};
 
+};

@@ -6,7 +6,7 @@
 /// <summary>
 /// Includes all States in the program. Starts with STAY (equals 0) and ends in QUIT.
 /// </summary>
-enum class eStates { STAY, MainMenu, Configs, GameState, Pause, PauseConfigs, QUIT};
+enum class eStates { STAY, MainMenu, Configs, Game, Pause, PauseConfigs, QUIT};
 
 /// <summary>
 /// Base Class for all States in the application.
@@ -53,6 +53,12 @@ public:
 	/// </summary>
 	/// <returns> Returns eState::STAY by default </returns>
 	virtual inline eStates NextState() { return mNextState; };
+
+	/// <summary>
+	/// Setter method for changing mNextState data member.
+	/// </summary>
+	/// <param name="selectedState"> The state that yo want to switch </param>
+	inline void ChangeTo(eStates selectedState) { this->mNextState = selectedState; };
 
 };
 
