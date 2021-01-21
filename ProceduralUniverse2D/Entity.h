@@ -19,7 +19,7 @@ public:
 	/// <summary>
 	/// Constructor.
 	/// </summary>
-	Entity();
+	Entity(const sf::Texture& texture);
 	/// <summary>
 	/// Destructor.
 	/// </summary>
@@ -40,13 +40,19 @@ public:
 	/// Set the data member Sprite at certain position.
 	/// </summary>
 	/// <param name="position"> New position. </param>
-	virtual void SetPosition(sf::Vector2 position);
+	virtual void SetPosition(sf::Vector2i position);
 
 	/// <summary>
 	/// Get the current Entitys Sprite position.
 	/// </summary>
 	/// <returns> Sprite data member position. </returns>
 	virtual sf::Vector2 GetPosition();
+
+	/// <summary>
+	/// Returns a FloatRect that contains the Sprite GlobalBounds
+	/// </summary>
+	/// <returns> Entity global bounds </returns>
+	sf::FloatRect EntityGlobalBounds();
 
 	/// <summary>
 	/// Move the sprite relatively to the current position.

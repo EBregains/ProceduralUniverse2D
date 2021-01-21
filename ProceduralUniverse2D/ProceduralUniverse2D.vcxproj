@@ -154,6 +154,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="src\MainMenu.cpp" />
     <ClCompile Include="src\ProceduralUniverse.cpp" />
     <ClCompile Include="src\RandomFunctions.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -161,6 +164,9 @@
     <ClCompile Include="src\UniverseApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="src\MainMenu.h" />
     <ClInclude Include="src\ProceduralUniverse.h" />
     <ClInclude Include="src\RandomFunctions.h" />
     <ClInclude Include="src\State.h" />
